@@ -2,6 +2,7 @@ package com.example.demo.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,9 +13,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@SuppressWarnings("serial")
 @Entity
-@Table(name = "ENDERECO")
+@Table
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,6 +25,7 @@ public class Endereco implements Serializable {
 	private Integer id;
 	private String rua;
 	private Integer numero;
+	@Column(length = 11)
 	private String cidade;
 
 	public String getRua() {

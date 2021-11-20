@@ -1,8 +1,8 @@
-package com.example.demo.webservice;
+package com.example.demo.controller;
 
-import java.util.List;
-import java.util.Optional;
-
+import com.example.demo.model.Contato;
+import com.example.demo.repository.ContatoRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,10 +14,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.Contato;
-import com.example.demo.repository.ContatoRepository;
-
-import lombok.AllArgsConstructor;
+import java.util.List;
+import java.util.Optional;
 
 @RestController
 @AllArgsConstructor
